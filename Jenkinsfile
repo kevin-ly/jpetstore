@@ -11,6 +11,10 @@ pipeline {
         bat 'runmaven.bat'
       }
     }
+	stage('qualimétrie'){
+		steps{
+		}
+	}
 	stage('Publication'){
 		steps {
 			nexusArtifactUploader artifacts: [
