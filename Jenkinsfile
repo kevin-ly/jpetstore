@@ -13,14 +13,8 @@ pipeline {
     }
     stage('qualimétrie') {
       steps {
-<<<<<<< HEAD
 		withSonarQubeEnv('Sonar')
         bat(script: 'runqualimetrie.bat', encoding: 'utf-8')
-
-=======
-        bat(script: 'runqualimetrie.bat', encoding: 'utf-8', returnStatus: true)
-        waitForQualityGate(abortPipeline: true)
->>>>>>> cf6b3d6219a08a8ca66a8e5c7d44a4e4ab515510
       }
     }
 	stage('quality gate'){
