@@ -8,11 +8,12 @@ pipeline {
     }
     stage('build Maven') {
       steps {
-        bat 'runmaven.bat'
+		bat(script: 'runmaven.bat', encoding: 'utf-8')
       }
     }
 	stage('qualimétrie'){
 		steps{
+			bat(script: 'runmaven.bat', encoding: 'utf-8')
 		}
 	}
 	stage('Publication'){
